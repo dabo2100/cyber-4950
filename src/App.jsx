@@ -3,6 +3,8 @@ import MainLayout from './MainLayout';
 import ProductsPage from './pages/ProductsPage';
 import { Toaster } from 'react-hot-toast';
 import CartPage from './pages/CartPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 export default function App() {
   return (
@@ -16,8 +18,8 @@ export default function App() {
             <Route path="cart" element={<CartPage />}></Route>
           </Route>
 
-          <Route path="login" element={<h1>Login Page</h1>}></Route>
-          <Route path="register" element={<h1>Register Page</h1>}></Route>
+          <Route path="login" element={<LoginPage />}></Route>
+          <Route path="register" element={<RegisterPage />}></Route>
 
           <Route path="*" element={<h1>404 Page</h1>}></Route>
         </Routes>

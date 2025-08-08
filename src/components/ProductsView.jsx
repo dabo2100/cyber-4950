@@ -5,10 +5,13 @@ import axios from 'axios';
 export default function ProductsView() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
+    let domain = 'http://82.112.241.233:2500';
+    let endPoint = '/api/products?populate=*';
+    let url = domain + endPoint;
     axios
-      .get('https://fakestoreapi.com/products')
+      .get(url)
       .then((res) => {
-        setProducts(res.data);
+        setProducts(res.data.data);
       })
       .catch((err) => {});
   }, []);
