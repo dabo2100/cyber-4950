@@ -21,13 +21,11 @@ export default function RegisterPage() {
     axios
       .post(url, data)
       .then((res) => {
-        console.log(res.data);
         navigate('/');
       })
       .catch((err) => {
         let msg = err.response.data.error.message;
         toast.error(msg);
-        console.log(err);
       });
   };
 
